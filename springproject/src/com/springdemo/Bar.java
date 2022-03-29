@@ -9,14 +9,15 @@ public class Bar {
 
     }
 
-    public Bar(String name, int age) {
+    public Bar(String name, int age,Foo foo) {
         this.name = name;
         this.age = age;
+        this.foo=foo;
     }
 
-    public void setFoo(Foo foo) {
-        this.foo = foo;
-    }
+//    public void setFoo(Foo foo) {
+//        this.foo = foo;
+//    }
 
     public void processFooName() {
         System.out.println("Name in Injected Foo is: " + foo.getName());

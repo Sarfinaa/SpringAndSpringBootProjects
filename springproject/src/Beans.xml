@@ -11,8 +11,8 @@
 <property name="name" value="Karan Seth"></property>
 </bean>
  <bean id="bar" class="com.springdemo.Bar">
-<constructor-arg value="Karan" type="String"></constructor-arg>  
+<constructor-arg value="Karan" index="0"></constructor-arg>  
 <constructor-arg value="21" type="int"></constructor-arg>  
-<property name="foo" ref="foo"></property>
+<constructor-arg type="Foo" ref="foo"></constructor-arg >
     </bean>
 </beans>
