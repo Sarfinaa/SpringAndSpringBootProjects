@@ -58,4 +58,9 @@ public class WorkerRepository implements WorkerDAO {
                 emp.getSalary(), joiningDate, emp.getDepartment(), emp.getEmail(),emp.getWorkerId());
 System.out.println(res+" row is updated!!!");
     }
+    public static void printAllWorkers(List<Worker> workers) {
+		for(Worker worker: workers) {
+System.out.println(worker);
+		}
+}
 }

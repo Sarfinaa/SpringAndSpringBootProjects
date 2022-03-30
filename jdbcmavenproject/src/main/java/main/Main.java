@@ -4,11 +4,9 @@ import java.util.List;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 import repository.WorkerRepository;
 import model.Worker;
 import java.util.Date;
-import helpers.WorkerHelper;
 public class Main {
     public static void main(String[] args) throws Exception {
         @SuppressWarnings("resource")
@@ -21,7 +19,7 @@ public class Main {
         workerRepository.update(emp);
         List<Worker> workers = workerRepository.getWorkers();
         System.out.println("---------Printing Workers Data-----------");
-       WorkerHelper.printAllWorkers(workers);
+        WorkerRepository.printAllWorkers(workers);
        System.out.println("------------------------------------------");
        System.out.println("Get row with workerId 1");
         System.out.println(workerRepository.getWorker(1));
