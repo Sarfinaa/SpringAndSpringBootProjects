@@ -1,9 +1,9 @@
-package com.springboot.workers.springjdbcexample.controller;
+package com.springboot.workers.crudapi.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springboot.workers.springjdbcexample.util.DateTimeUtilities;
+import com.springboot.workers.crudapi.util.DateTimeUtilities;
 
 @RestController
 public class HomeController {

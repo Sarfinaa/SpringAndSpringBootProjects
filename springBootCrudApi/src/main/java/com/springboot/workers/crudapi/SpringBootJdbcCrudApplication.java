@@ -1,13 +1,13 @@
-package com.springboot.workers.springjdbcexample;
+package com.springboot.workers.crudapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootJdbcTemplateApplication {
+public class SpringBootJdbcCrudApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootJdbcTemplateApplication.class, args);
+		SpringApplication.run(SpringBootJdbcCrudApplication.class, args);
 	}
 
 }

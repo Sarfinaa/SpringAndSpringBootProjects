@@ -1,14 +1,15 @@
-package com.springboot.workers.springjdbcexample.dao;
+package com.springboot.workers.crudapi.dao;
 import java.sql.SQLException;
 import java.util.List;
-import com.springboot.workers.springjdbcexample.model.Worker;
+
+import com.springboot.workers.crudapi.model.Worker;
 
 
 public interface WorkerDAO {
         public int add(Worker worker)
                         throws SQLException;
 
-        public void delete(int workerId)
+        public int delete(int workerId)
                         throws SQLException;
 
         public Worker getWorker(int workerId)
@@ -17,7 +18,7 @@ public interface WorkerDAO {
         public List<Worker> getWorkers()
                         throws SQLException;
 
-        public int update(Worker emp)
+        public int update(int wrokerId,String email)
                         throws SQLException;
     
 

@@ -1,4 +1,4 @@
-package com.springboot.workers.springjdbcexample.util;
+package com.springboot.workers.crudapi.util;
 
 import java.sql.Timestamp;
 

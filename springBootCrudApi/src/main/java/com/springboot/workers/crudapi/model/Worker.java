@@ -1,4 +1,4 @@
-package com.springboot.workers.springjdbcexample.model;
+package com.springboot.workers.crudapi.model;
 
 import java.util.Date;
 
@@ -11,6 +11,9 @@ public class Worker implements Comparable<Worker> {
     private String department;
     private String email;
 
+    Worker(){
+	joiningDate=new Date();
+}
     @Override
     public int compareTo(Worker other) {
         return this.workerId - other.workerId;

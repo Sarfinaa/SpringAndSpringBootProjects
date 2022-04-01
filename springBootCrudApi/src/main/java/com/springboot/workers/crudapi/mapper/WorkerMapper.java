@@ -1,9 +1,9 @@
-package com.springboot.workers.springjdbcexample.mapper;
+package com.springboot.workers.crudapi.mapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
 
-import com.springboot.workers.springjdbcexample.model.Worker;
+import com.springboot.workers.crudapi.model.Worker;
 
 public class WorkerMapper implements RowMapper<Worker> {
     public Worker mapRow(ResultSet result, int rowNum) throws SQLException {
