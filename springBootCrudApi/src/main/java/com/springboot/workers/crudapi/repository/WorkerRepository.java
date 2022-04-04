@@ -16,7 +16,7 @@ import com.springboot.workers.crudapi.model.Worker;
 public class WorkerRepository implements WorkerDAO {
 	@Autowired
 	 JdbcTemplate jdbcTemplateObject;
-    public int add(Worker worker) throws SQLException {
+    public int insertWorker(Worker worker) throws SQLException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String joiningDate = sdf.format(worker.getJoiningDate());
         String query = "INSERT INTO worker VALUES(?,?,?,?,?,?,?)";
@@ -25,14 +25,14 @@ public class WorkerRepository implements WorkerDAO {
 
     }
 
-    public int delete(int workerId) throws SQLException {
+    public int deleteWorkerById(int workerId) throws SQLException {
         String query = "DELETE FROM Worker WHERE WORKER_ID = ?";
         int res=jdbcTemplateObject.update(query, workerId);
 return res;
 }
 
 	@SuppressWarnings("deprecation")
-	public Worker getWorker(int workerId) throws SQLException {
+	public Worker findWorkerById(int workerId) throws SQLException {
         String query = "SELECT * FROM worker WHERE worker_id=?";
         return jdbcTemplateObject.queryForObject(
                 query,
@@ -41,17 +41,19 @@ return res;
 
     }
 
-    public List<Worker> getWorkers() throws SQLException {
+    public List<Worker> findAllWorkers() throws SQLException {
         String query = "SELECT * FROM worker";
         return jdbcTemplateObject.query(
                 query,
                 new WorkerMapper());
     }
 
-    public int update(int workerId,String email) throws SQLException {
+    public int updateEmailById(int workerId,String email) throws SQLException {
         String query = "UPDATE worker SET email = ? WHERE worker_id = ? ";
        int res= jdbcTemplateObject.update(query, email,workerId);
 return res;
     }
+
+
   
 }

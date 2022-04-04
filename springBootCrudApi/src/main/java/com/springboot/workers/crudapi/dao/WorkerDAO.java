@@ -6,19 +6,19 @@ import com.springboot.workers.crudapi.model.Worker;
 
 
 public interface WorkerDAO {
-        public int add(Worker worker)
+        public int insertWorker(Worker worker)
                         throws SQLException;
 
-        public int delete(int workerId)
+        public int deleteWorkerById(int workerId)
                         throws SQLException;
 
-        public Worker getWorker(int workerId)
+        public Worker findWorkerById(int workerId)
                         throws SQLException;
 
-        public List<Worker> getWorkers()
+        public List<Worker> findAllWorkers()
                         throws SQLException;
 
-        public int update(int wrokerId,String email)
+        public int updateEmailById(int wrokerId,String email)
                         throws SQLException;
     
 
